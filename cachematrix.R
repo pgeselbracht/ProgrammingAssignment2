@@ -52,10 +52,12 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
      
 	i <- x$inverseGet()
+	
 	if(!is.null(i)) {
-      	message("getting cached data")
-            return(i)
-      }
+      		message("getting cached data")
+            	return(i)
+      	}
+	
 	i <- solve(x$get())
 	x$inverseSet(i)
 	i
